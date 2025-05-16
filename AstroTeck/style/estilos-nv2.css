@@ -1,0 +1,199 @@
+@import url('https://fonts.cdnfonts.com/css/tt-norms');
+
+body {
+    font-family: 'TT Norms', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    position: relative; /* Necesario para que ::after se posicione relativo al enlace */
+    transition: font-size 0.3s ease; /* Transición suave para el tamaño de fuente */
+  }
+  
+  /* Estilo para el nav horizontal */
+  nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 100px;
+    height: 80px;
+  
+  }
+  .contactos{
+    position: relative;
+    left: 600px;
+  
+    font-family: 'TT Norms', sans-serif; /* Cambia la fuente a TT Norms */
+    font-size: 20px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+  }
+  .ins{
+    padding-left: 10px;
+  }
+  
+  .splide__slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  nav a:not(:has(img)) {
+    color: #333;
+    font-family: 'TT Norms';
+    font-size: 20px;
+  }
+  
+  nav a:not(:has(img)):hover {
+    font-size: 26px; /* Cambia el tamaño de fuente al pasar el cursor */
+  }
+  
+  nav a:not(:has(img))::after {
+    content: ""; /* Crea un elemento vacío */
+    position: absolute; /* Posiciona la línea relativa al enlace */
+    left: 0;
+    bottom: -5px; /* Ajusta la posición de la línea debajo del texto */
+    width: 0; /* La línea comienza invisible */
+    height: 2px; /* Grosor de la línea */
+    background-color: #333;
+    transition: width 0.3s ease; /* Transición suave para la expansión de la línea */
+    z-index: -1;
+  }
+  
+  nav a:not(:has(img)):hover::after {
+    width: 100%; /* La línea se expande completamente al pasar el cursor */
+  }
+  
+.producto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.producto-imagen img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto-detalles {
+    max-width: 500px;
+    text-align: left;
+}
+
+.producto-detalles h1 {
+    font-size: 32px;
+    color: #000;
+}
+
+.producto-detalles p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.producto-detalles ul {
+    list-style: none;
+    padding: 0;
+}
+
+.producto-detalles ul li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.precio {
+    font-size: 28px;
+    color: #43b600;
+    margin: 20px 0;
+}
+
+.boton-comprar {
+    background-color: #43b600;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-comprar:hover {
+    background-color: #36a000;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+/* Carrusel */
+.carrusel {
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navegación manual */
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.manual-btn {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.manual-btn.active {
+    background-color: #43b600;
+}
+
+.manual-btn:hover {
+    background-color: #43b600;
+}

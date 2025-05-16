@@ -1,0 +1,137 @@
+/* Estilo general para la página */
+body {
+    font-family: 'TT Norms', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    position: relative; /* Necesario para que ::after se posicione relativo al enlace */
+    transition: font-size 0.3s ease; /* Transición suave para el tamaño de fuente */
+  }
+  
+  /* Estilo para el nav horizontal */
+  nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 100px;
+    height: 80px;
+  
+  }
+  
+  .contactos{
+    position: relative;
+    left: 600px;
+  
+    font-family: 'TT Norms', sans-serif; /* Cambia la fuente a TT Norms */
+    font-size: 20px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+  }
+  .ins{
+    padding-left: 10px;
+  }
+  
+  nav a:not(:has(img)) {
+    color: #333;
+    font-family: 'TT Norms';
+    font-size: 20px;
+  }
+  
+  nav a:not(:has(img)):hover {
+    font-size: 26px; /* Cambia el tamaño de fuente al pasar el cursor */
+  }
+  
+  nav a:not(:has(img))::after {
+    content: ""; /* Crea un elemento vacío */
+    position: absolute; /* Posiciona la línea relativa al enlace */
+    left: 0;
+    bottom: -5px; /* Ajusta la posición de la línea debajo del texto */
+    width: 0; /* La línea comienza invisible */
+    height: 2px; /* Grosor de la línea */
+    background-color: #333;
+    transition: width 0.3s ease; /* Transición suave para la expansión de la línea */
+    z-index: -1;
+  }
+  
+  nav a:not(:has(img)):hover::after {
+    width: 100%; /* La línea se expande completamente al pasar el cursor */
+  }
+  
+  
+
+/* Estilo para la sección de sugerencias */
+.formulario-contacto {
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.formulario-contacto h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+form label {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    background-color: #43b600;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #36a000;
+}
+
+/* Estilo para el footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #777;
+}
