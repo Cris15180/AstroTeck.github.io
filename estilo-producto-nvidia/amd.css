@@ -1,0 +1,343 @@
+@import url('https://fonts.cdnfonts.com/css/tt-norms');
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(20px); /* Comienza desplazado hacia abajo */
+  }
+  to {
+    opacity: 1; /* Termina completamente visible */
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+  background-color: #f5f5f5; /* Color de fondo de la página */
+  height: auto;
+  max-width: auto;
+  scroll-behavior: smooth;
+}
+body {
+  animation: fadeIn 1s ease-in-out; 
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: font-size 0.3s ease;
+}
+
+
+nav {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 100px;
+  
+}
+  header{
+  transition: 0.3s ease;
+  border-bottom: solid 1px #ccc;
+}
+header:hover{
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 100px;
+}
+
+.contactos{
+  position: relative;
+  left: 600px;
+
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #333; 
+}
+
+
+  .carrito{
+    margin: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 100px;
+    padding-right: 500px;
+  }
+
+  .carrito:hover{
+   animation: balanceo 0.6s ease-in-out;
+  }
+ 
+  @keyframes balanceo {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-15deg); }
+  50%  { transform: rotate(15deg); }
+  75%  { transform: rotate(-10deg); }
+  100% { transform: rotate(1deg); }
+}
+header{
+  transition: 0.3s ease;
+  border-bottom: solid 1px #ccc;
+}
+header:hover{
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2); 
+}
+
+nav a:not(.carrito):not(:has(img)) {
+  color: #333;
+  font-family: 'TT Norms';
+  font-size: 20px;
+}
+
+nav a:not(.carrito):not(:has(img)):hover {
+  font-size: 23px; 
+}
+
+nav a:not(.carrito):not(:has(img))::after {
+  content: ""; 
+  position: absolute; 
+  left: 0;
+  bottom: -5px;
+  width: 0; 
+  height: 2px; 
+  background-color: #333;
+  transition: width 0.3s ease; 
+  z-index: -1;
+}
+
+nav a:not(:has(img)):hover::after {
+  width: 100%; 
+}
+
+.imagen_titular img{
+  position: relative;
+  left: 43px;
+}
+
+ /* //////////////  */
+
+ h1{
+    font-family: 'TT Norms', sans-serif; 
+    font-size: 50px; 
+    color: #333; 
+    text-align: center;
+    padding-top: 50px;
+ }
+ 
+ /* //////////////  */
+ 
+.tarjetas-prevista{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.tarjeta-producto-prevista-1{
+
+    width: 300px;
+    height: 590px;
+    background-color: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 30px;
+}
+
+.imagen-prevista-1{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: rgb(241, 255, 240);
+}
+.imagen-prevista-1 img{
+    width: 300px;
+    background-color: white;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-family: 'TT Norms', sans-serif; 
+    font-size: 30px; 
+    color: #333; 
+    text-align: center;
+}
+h3{
+
+    font-family: 'TT Norms', sans-serif; 
+    font-size: 25px; 
+    color: #00a300; 
+    text-align: center;
+}
+
+
+
+
+/* /////////// 2 */
+
+
+.tarjeta-producto-prevista-2{
+
+     width: 300px;
+    height: 590px;
+    background-color: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 30px;
+}
+
+.imagen-prevista-2{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: rgba(241, 255, 240, 0);
+}
+.imagen-prevista-2 img{
+   width: 300px;
+
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-family: 'TT Norms', sans-serif; 
+    font-size: 30px; 
+    color: #333; 
+    text-align: center;
+}
+
+h4{
+    font-family: 'TT Norms', sans-serif; 
+    font-size: 25px; 
+    color: #00a300; 
+    text-align: center;
+}
+
+h3{
+    font-family: 'TT Norms', sans-serif; 
+    font-size: 25px; 
+    color: #00a300; 
+    text-align: center;
+}
+
+.boton-comprar-1 a{
+    background-color: #00a300; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-family: 'TT Norms', sans-serif; 
+    font-size: 20px; 
+    transition: background-color 0.3s ease;
+}
+
+.boton-comprar-1 a:hover{
+    background-color: #008000; 
+}
+
+/* /////////// 3 */
+
+/* /////////// 4 */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+footer p {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 14px;
+    color: #777;
+}
+.contactos{
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #333; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  color: #000000;
+  margin-top: 50px;
+}
+
+@media (max-width: 480px) {
+  body, html {
+  overflow-x: hidden;
+}
+h1{
+  font-size: 40px;
+}
+ .nav-links:hover{
+    font-size: 20px;
+  }
+   .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 400px;
+    padding-right: 0;
+    margin: 10px;
+  }
+  .contactos {
+    display: flex;
+    flex-direction: row;
+    align-content: end;
+    gap: 20px;
+    font-size: 14px;
+    position: relative;
+    right: 50px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  nav img{
+    padding-bottom: 20px;
+  }
+.hide-on-mobile { /* esta vara es para ocultar el texto de ins y correo */
+    display: none;
+  }
+
+  .tarjetas-prevista {
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .tarjeta-producto-prevista-1,
+  .tarjeta-producto-prevista-2 {
+    max-width: 98vw;
+  }
+}

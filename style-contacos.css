@@ -1,0 +1,307 @@
+/* Estilo para la sección de sugerencias */
+a {
+    text-decoration: none;
+    color: inherit;
+    position: relative; /* Necesario para que ::after se posicione relativo al enlace */
+    transition: font-size 0.3s ease; /* Transición suave para el tamaño de fuente */
+  }
+  
+  /* Estilo para el nav horizontal */
+  nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 100px;
+    height: 80px;
+  
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    position: relative; /* Necesario para que ::after se posicione relativo al enlace */
+    transition: font-size 0.3s ease; /* Transición suave para el tamaño de fuente */
+  }
+  
+  /* Estilo para el nav horizontal */
+  nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 100px;
+    height: 80px;
+  
+  }
+  
+  .contactos{
+    position: relative;
+    left: 600px;
+    font-family: 'TT Norms', sans-serif; /* Cambia la fuente a TT Norms */
+    font-size: 20px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+  }
+  .ins{
+    padding-left: 10px;
+  }
+  
+  nav a:not(:has(img)) {
+    color: #333;
+    font-family: 'TT Norms';
+    font-size: 20px;
+  }
+  
+  nav a:not(:has(img)):hover {
+    font-size: 26px; /* Cambia el tamaño de fuente al pasar el cursor */
+  }
+  
+  nav a:not(:has(img))::after {
+    content: ""; /* Crea un elemento vacío */
+    position: absolute; /* Posiciona la línea relativa al enlace */
+    left: 0;
+    bottom: -5px; /* Ajusta la posición de la línea debajo del texto */
+    width: 0; /* La línea comienza invisible */
+    height: 2px; /* Grosor de la línea */
+    background-color: #333;
+    transition: width 0.3s ease; /* Transición suave para la expansión de la línea */
+    z-index: -1;
+  }
+  
+  nav a:not(:has(img)):hover::after {
+    width: 100%; /* La línea se expande completamente al pasar el cursor */
+  }
+   
+  .carrito{
+    margin: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 100px;
+    padding-right: 500px;
+  }
+
+  .carrito:hover{
+   animation: balanceo 0.6s ease-in-out;
+  }
+ 
+  @keyframes balanceo {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-15deg); }
+  50%  { transform: rotate(15deg); }
+  75%  { transform: rotate(-10deg); }
+  100% { transform: rotate(1deg); }
+}
+header{
+  transition: 0.3s ease;
+  border-bottom: solid 1px #ccc;
+}
+header:hover{
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2); 
+}
+
+nav a:not(.carrito):not(:has(img)) {
+  color: #333;
+  font-family: 'TT Norms';
+  font-size: 20px;
+}
+
+nav a:not(.carrito):not(:has(img)):hover {
+  font-size: 23px; 
+}
+
+nav a:not(.carrito):not(:has(img))::after {
+  content: ""; 
+  position: absolute; 
+  left: 0;
+  bottom: -5px;
+  width: 0; 
+  height: 2px; 
+  background-color: #333;
+  transition: width 0.3s ease; 
+  z-index: -1;
+}
+
+nav a:not(:has(img)):hover::after {
+  width: 100%; 
+}
+
+.imagen_titular img{
+  position: relative;
+  left: 43px;
+}
+
+
+.sugerencias, .sobre-nosotros, .contacto {
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.sugerencias h1, .sobre-nosotros h1, .contacto h1 {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sugerencias p, .sobre-nosotros p, .contacto p {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    background-color: #43b600;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #36a000;
+}
+
+/* Estilo para la sección de contacto */
+.contacto {
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.contacto h1 {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Estilo para la lista de contacto */
+.contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto ul li {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contacto ul li a {
+    color: #43b600;
+    text-decoration: none;
+}
+
+.contacto ul li a:hover {
+    text-decoration: underline;
+}
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+footer p{
+    font-family: "tt norms", sans-serif;
+    font-size: 14px;
+    color: #777;
+}
+
+footer a{
+    font-family: "tt norms", sans-serif;
+    font-size: 14px;
+    color: #000000;
+}
+
+.contactos{
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #333; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  color: #000000;
+  margin-top: 50px;
+}
+  
+@media (max-width: 480px) {
+    nav{
+        padding-bottom: 200px;
+    }
+   .nav-links:hover{
+    font-size: 0px;
+  }
+   .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 400px;
+    padding-right: 0;
+    margin: 10px;
+  }
+
+  .contactos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  nav img{
+    width: 200px;
+  }
+  .contactos {
+    display: none !important;
+  }
+}

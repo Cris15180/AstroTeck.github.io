@@ -1,0 +1,638 @@
+@import url('https://fonts.cdnfonts.com/css/tt-norms');
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(20px); /* Comienza desplazado hacia abajo */
+  }
+  to {
+    opacity: 1; /* Termina completamente visible */
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+  background-color: #f5f5f5; /* Color de fondo de la página */
+  height: 2273px;
+  scroll-behavior: smooth;
+}
+body {
+  animation: fadeIn 1s ease-in-out; 
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: font-size 0.3s ease;
+}
+
+
+nav{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 100px;
+  height: 80px;
+}
+
+  
+  .carrito{
+    margin: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 100px;
+    padding-right: 800px;
+  }
+
+  .carrito:hover{
+   animation: balanceo 0.6s ease-in-out;
+  }
+ 
+  @keyframes balanceo {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-15deg); }
+  50%  { transform: rotate(15deg); }
+  75%  { transform: rotate(-10deg); }
+  100% { transform: rotate(1deg); }
+}
+header{
+  transition: 0.3s ease;
+  border-bottom: solid 1px #ccc;
+}
+header:hover{
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2); 
+}
+
+nav a:not(.carrito):not(:has(img)) {
+  color: #333;
+  font-family: 'TT Norms';
+  font-size: 20px;
+}
+
+nav a:not(.carrito):not(:has(img)):hover {
+  font-size: 25px; 
+}
+
+nav a:not(.carrito):not(:has(img))::after {
+  content: ""; 
+  position: absolute; 
+  left: 0;
+  bottom: -5px;
+  width: 0; 
+  height: 2px; 
+  background-color: #333;
+  transition: width 0.3s ease; 
+  z-index: -1;
+}
+
+nav a:not(:has(img)):hover::after {
+  width: 100%; 
+}
+
+.imagen_titular img{
+  position: relative;
+  left: 43px;
+}
+
+.inf_principal {
+    width: 400px;
+    font-family: 'TT Norms', sans-serif;
+    font-size: 10px;
+    color: #333;
+    margin-top: 200px; 
+     position: relative; 
+    left: 190px;
+    text-align: center;
+
+}
+
+.texto_principal {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px; 
+    position: relative;
+    left: 30px;
+    text-align: center;
+    width: 600px;
+}
+
+.boton-productos {
+  background-color: #43b600; 
+  color: white; 
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 16px; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; 
+  left: 120px;
+}
+
+.boton-productos:hover {
+  background-color: rgb(5, 133, 5);
+}
+
+.imagenes_inicio{
+  position: relative;
+  bottom: 770px;
+  left: 130px;
+}
+.imagen_principal {
+  position: absolute;
+  left: 900px;
+  top: 250px;
+  z-index: 2;
+
+}
+
+.imagen_secundaria {
+  position: absolute;
+  left: 850px;
+  top: 200px;
+  z-index: 1;
+  rotate: 46deg;
+  
+}
+
+.imagen_principal img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
+}
+
+.imagen_secundaria img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.imagen_principal img:hover {
+  transform: scale(1.04); 
+}
+
+.imagen_secundaria img:hover{
+  transform: scale(1.04); 
+}
+.imagenes-graficas{
+  margin: 30px;
+}
+.aire{
+  height: 400px;
+}
+.eleccion-graficas{
+  background-color: #000000;
+  box-shadow: 4px 4px 100px rgb(0, 0, 1);
+}
+
+.nav-graficas {
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  padding: 10px 20px; 
+  gap: 90px; 
+  height: 80px;
+
+}
+.nav-graficas a {
+  color: #f5f5f5; 
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px;
+  transition: font-size 0.3s ease; 
+  text-decoration: none; 
+
+}
+.parte-inferior {
+  background-image:url(../imagenes/orange-red-chevron-background.avif);
+  height: 1100px;
+  background-size: cover;
+  box-shadow: #000000 0px 0px 1000px;
+  border-radius: 5px;
+}
+.tarjetas{
+  height: 900px;
+}
+
+h1{
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 40px; 
+  color: #ffffff; 
+  margin-top: 20px; 
+  position: relative; 
+  right: 750px;
+  text-align: center;
+}
+
+
+.video-container video {
+  border-radius: 40px; 
+  overflow: hidden;
+}
+
+
+/* .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: #ffffff; 
+  min-width: 200px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  z-index: 4;
+  padding: 10px 0;
+  border-radius: 8px; 
+}
+
+
+.dropdown-content a {
+  color: #000000; 
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-family: 'TT Norms', sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+
+.dropdown-content a:hover {
+  background-color: #c4fab6; 
+  border-radius: 100px; 
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block; 
+} */
+.redireccion{
+  font-family: 'TT Norms', sans-serif;
+  background-color: #09ff00c0;
+  color: #000000;
+  backdrop-filter: blur(20px);
+  box-shadow: 4px 4px 100px rgb(0, 0, 1);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+  position: relative;
+  top: 30px;
+}
+.tarjeta_nvidia{
+  background-color: #ffffff2a;
+  backdrop-filter: blur(20px);
+  box-shadow: 4px 4px 100px rgb(0, 0, 1);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 600px;
+  height: 830px;
+  position: relative;
+  left: 110px;
+}
+.titulo_nvidia h2{
+  font-family: 'TT Norms', sans-serif;
+  font-size: 40px; 
+  color: #ffffff; 
+  margin-top: 20px 10px; 
+  text-align: center;
+}
+.texto_nvidia{
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #ffffff; 
+  margin-top: 20px; 
+  padding-left: 55px;
+  text-align: center;
+  width: 500px;
+}
+.seleccion {
+  background-color: #41ff07;
+  box-shadow: 4px 4px 100px rgb(0, 0, 1);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 120px;
+  height: 30px;
+  color: #000000;
+  font-family: 'TT Norms', sans-serif;
+  font-size: 20px;
+}
+
+.tarjeta_amd{
+  background-color: #ffffff2a;
+  backdrop-filter: blur(20px);
+  box-shadow: 4px 4px 100px rgb(0, 0, 1);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 600px;
+  height: 830px;
+  position: relative;
+  left: 1100px;
+  bottom: 890px;
+}
+
+.titulo_amd h2{
+  font-family: 'TT Norms', sans-serif;
+  font-size: 40px; 
+  color: #ffffff; 
+  margin-top: 20px 10px; 
+  text-align: center;
+}
+
+.texto_amd{
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #ffffff; 
+  margin-top: 20px; 
+  padding-left: 55px;
+  text-align: center;
+  width: 500px;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #000000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  top: 100px; 
+}
+
+footer p {
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 14px;
+  color: #ffffff;
+}
+
+
+.contactos{
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #333; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  color: #ffffff;
+  margin-top: 50px;
+}
+/* /aqui empieza la vara esta de mediaq quiery/ */
+
+@media (max-width: 1200px) {
+  .tarjeta_amd {
+    left: 0;
+    bottom: 0;
+    margin: 40px auto;
+  }
+  .tarjeta_nvidia {
+    left: 0;
+    margin: 40px auto;
+  }
+  .parte-inferior {
+    height: auto;
+    padding-bottom: 40px;
+  }
+  .tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .inf_principal {
+    width: 90%;
+    left: 0;
+    margin: 40px auto 0 auto;
+  }
+  .imagen_titular img{
+    width: 400px;
+    height: auto;
+    padding-right: 60px;
+  }
+  .texto_principal {
+    width: 95%;
+    left: 0;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+  .imagenes_inicio {
+    position: static;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imagen_principal,
+  .imagen_secundaria {
+    position: static;
+    left: 0;
+    top: 0;
+    margin: 10px 0;
+    rotate: 0deg;
+    width: 100%;
+    max-width: 100%;
+  }
+  .imagen_principal img,
+  .imagen_secundaria img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .aire {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .contactos {
+    left: 0;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .inf_principal {
+    margin-top: 40px;
+    width: 98%;
+    left: 0;
+  }
+  .texto_principal {
+    width: 98%;
+    font-size: 14px;
+    left: 0;
+  }
+  .imagen_principal{
+    z-index: 1;
+    position: relative;
+    top: 60px;
+  }
+  .imagen_secundaria{
+    z-index: 0;
+    position: relative;
+    top: -200px;
+    rotate: 45deg;
+  }
+  .boton-productos {
+    left: 0;
+    margin: 0 auto;
+    display: block;
+  }
+  .tarjeta_nvidia,
+  .tarjeta_amd {
+    width: 95%;
+    left: 0;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  .texto_nvidia,
+  .texto_amd {
+    width: 98%;
+    padding-left: 0;
+    font-size: 14px;
+  }
+  .titulo_nvidia h2,
+  .titulo_amd h2 {
+    font-size: 28px;
+  }
+  .seleccion {
+    width: 100px;
+    font-size: 16px;
+    padding: 10px;
+  }
+  .nav-graficas {
+    gap: 20px;
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+  .parte-inferior {
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .tarjetas {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 24px;
+    right: 0;
+    margin: 0 auto;
+  }
+  .aire {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  body, html {
+  overflow-x: hidden;
+}
+   .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100px;
+    padding-right: 0;
+    margin: 10px;
+  }
+
+  .contactos {
+    display: flex;
+    flex-direction: row;
+    align-content: end;
+    gap: 20px;
+    font-size: 14px;
+    position: relative;
+    right: 50px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  nav img{
+    padding-bottom: 20px;
+  }
+.hide-on-mobile { /* esta vara es para ocultar el texto de ins y correo */
+    display: none;
+  }
+  .boton-productos {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .seleccion {
+    font-size: 12px;
+    padding: 6px;
+    width: 80px;
+  }
+  .titulo_nvidia h2,
+  .titulo_amd h2 {
+    font-size: 18px;
+  }
+  .texto_nvidia,
+  .texto_amd,
+  .texto_principal {
+    font-size: 12px;
+  }
+  footer p {
+    font-size: 10px;
+    height: 40px; 
+    position: static;
+  }
+  .imagenes_inicio{
+    position: relative;
+    left: 0;
+    bottom: -90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imagen_secundaria{
+    position: relative;
+    top: -250px;
+  }
+  .imagen_titular img{
+    width: 300px;
+  }
+  .tarjeta_nvidia {
+    z-index: 10;
+    position: relative;
+    height: 500px;
+  }
+  .tarjeta_amd {
+    z-index: 1;
+    position: relative;
+    height: 500px;
+  }
+  .video-container video{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
